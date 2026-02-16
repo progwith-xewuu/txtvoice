@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Voice Pareh</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+
+<body>
+    <div class="container">
+        <textarea id="T" placeholder="Type mo dito preee.."></textarea>
+        <button onclick="speakText()">Start</button>
+    </div>
+
+    <script>
+        function speakText() {
+            let text = document.getElementById("T").value;
+            let speech = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(speech);
+        }
+    </script>   
+
+</body>
+</html>
